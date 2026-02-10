@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding GSM, BF, and ECT in Cardboard Boxes - SK Printers</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a1a1a;
+            --secondary: #8B6F47;
+            --success: #40916C;
+            --text: #212529;
+            --text-light: #6C757D;
+            --border: #DEE2E6;
+            --bg-alt: #F8F9FA;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 800;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.98);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-family: 'Manrope', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-center {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-center a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .nav-center a:hover {
+            color: var(--secondary);
+        }
+
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        article {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .article-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .article-meta {
+            color: var(--text-light);
+            margin-top: 1rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1rem;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .article-content h3 {
+            margin: 2rem 0 1rem;
+            font-size: 1.5rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 3rem;
+            color: var(--secondary);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 4rem 2rem 2rem;
+            margin-top: 5rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="sk-printers-ultimate-website.html" class="logo">📦 SK Printers</a>
+            <div class="nav-center">
+                <a href="sk-printers-ultimate-website.html">Home</a>
+                <a href="blogs.html" style="color: var(--secondary);">Blogs</a>
+                <a href="sk-printers-ultimate-website.html#contact">Contact</a>
+            </div>
+            <a href="sk-printers-ultimate-website.html#quote" class="btn btn-primary">Get Quote</a>
+        </nav>
+    </header>
+
+    <article>
+        <div class="article-header">
+            <span class="article-icon">📊</span>
+            <h1>Understanding GSM, BF, and ECT in Cardboard Boxes</h1>
+            <div class="article-meta">Posted on Dec 15, 2025 | Category: Technical</div>
+        </div>
+
+        <div class="article-content">
+            <p style="margin-bottom: 1.5rem;">Ordering boxes can feel like learning a new language. Here is a cheat
+                sheet for the most common terms.</p>
+
+            <h3>GSM (Grams per Square Meter)</h3>
+            <p><strong>What it is:</strong> The weight/thickness of the paper. <br><strong>Common values:</strong> 100,
+                120, 140, 150, 180. Higher is generally thicker/stronger.</p>
+
+            <h3>BF (Bursting Factor)</h3>
+            <p><strong>What it is:</strong> The strength of the paper itself. <br><strong>Why it matters:</strong>
+                Determines how much force a box can take before puncturing. <br><strong>Rule of thumb:</strong> Standard
+                E-commerce = 18-20 BF. Export/Heavy = 28-35 BF.</p>
+
+            <h3>ECT (Edge Crush Test)</h3>
+            <p><strong>What it is:</strong> Measures stacking strength. <br><strong>Why it matters:</strong> If you
+                stack boxes in a warehouse, focus on ECT. If you ship single parcels, focus on Bursting Strength (BS).
+            </p>
+        </div>
+
+        <a href="blogs.html" class="back-link">← Back to All Articles</a>
+    </article>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="sk-printers-ultimate-website.html">Home</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="sk-printers-ultimate-website.html#products">Products</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="resources.html">Downloads</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div
+            style="text-align: center; margin-top: 2rem; opacity: 0.6; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+            &copy; 2026 SK Printers Manufacturing Pvt Ltd.
+        </div>
+    </footer>
+</body>
+
+</html>

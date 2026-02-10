@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions | SK Printers</title>
+    <meta name="description"
+        content="Find answers to common questions about SK Printers' cardboard boxes, manufacturing process, shipping, and payment terms.">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* Reusing global styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a1a1a;
+            --secondary: #8B6F47;
+            --accent: #2D6A4F;
+            --success: #40916C;
+            --warning: #F77F00;
+            --danger: #D62828;
+            --bg: #FFFFFF;
+            --bg-alt: #F8F9FA;
+            --text: #212529;
+            --text-light: #6C757D;
+            --border: #DEE2E6;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.2;
+        }
+
+        /* Header/Nav Styles */
+        header {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-family: 'Manrope', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .certification-badges {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .cert-badge {
+            background: var(--success);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+        }
+
+        .nav-center {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-center a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-center a:hover {
+            color: var(--secondary);
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .phone-number {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 0.9rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary);
+            border-color: var(--secondary);
+        }
+
+        .btn-success {
+            background: var(--success);
+            color: white;
+            border-color: var(--success);
+        }
+
+        /* FAQ Styles */
+        .faq-grid {
+            display: grid;
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: var(--bg-alt);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            max-height: 500px;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            opacity: 0.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-center {
+                display: none;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-actions .phone-number {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo-section">
+                <a href="sk-printers-ultimate-website.html" class="logo">📦 SK Printers</a>
+                <div class="certification-badges">
+                    <span class="cert-badge">ISO 9001:2015</span>
+                    <span class="cert-badge">FSC CERTIFIED</span>
+                </div>
+            </div>
+            <div class="nav-center">
+                <a href="sk-printers-ultimate-website.html#products">Products</a>
+                <a href="sk-printers-ultimate-website.html#industries">Industries</a>
+                <a href="resources.html">Resources</a>
+                <a href="faq.html" style="color: var(--secondary);">FAQ</a>
+                <a href="blogs.html">Blogs</a>
+            </div>
+            <div class="nav-actions">
+                <a href="tel:+919876543210" class="phone-number">📞 +91 98765 43210</a>
+                <button class="btn btn-primary" onclick="alert('Functionality available on Home Page')">Free
+                    Samples</button>
+            </div>
+        </nav>
+    </header>
+
+    <div style="background: var(--bg-alt); padding: 5rem 2rem; text-align: center;">
+        <h1 style="font-size: 3.5rem; color: var(--primary); margin-bottom: 1rem;">Frequently Asked <span
+                style="color: var(--secondary);">Questions</span></h1>
+        <p style="font-size: 1.2rem; color: var(--text-light); max-width: 700px; margin: 0 auto;">Everything you need to
+            know about our products, services, and policies.</p>
+    </div>
+
+    <!-- FAQ Section -->
+    <section id="faq" style="padding: 5rem 2rem;">
+        <div class="faq-grid">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    What is your minimum order quantity (MOQ)?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Our MOQ varies by product type: 500 units for 3-ply and 5-ply corrugated boxes, 1,000 units for
+                        custom printed boxes and mono cartons, and 250 units for 7-ply industrial boxes. We're flexible
+                        for large clients with ongoing orders.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    What is your typical delivery time?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Standard orders: 48 hours for stock items, 3-5 days for custom sizes, 5-7 days for custom printed
+                        boxes. Rush orders available in 24 hours with premium pricing. We deliver across 28 states in
+                        India.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Do you offer credit terms or only advance payment?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>New clients: 50% advance, 50% before dispatch. Established clients (3+ orders): Net 30 or Net 45
+                        credit terms available. We offer 5% discount for 100% advance payment. EMI options available for
+                        orders above ₹5 lakhs.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Can I get free samples before placing a bulk order?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! We provide up to 3 free samples delivered within 3-5 business days. For custom printed
+                        samples, we charge ₹500-1000 (refundable on first order). Use our sample request form on the
+                        homepage.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    What printing options do you offer?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We offer: 1-color print (₹1.5/box), Multi-color 3-4 colors (₹3.5/box), Full CMYK (₹5.5/box).
+                        Printing methods: Flexographic and Offset. Additional services: UV coating, lamination,
+                        embossing, spot UV.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    How do I know which box type is right for my product?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Use this quick guide: 3-ply (0-25 kg products, e-commerce), 5-ply (25-70 kg, electronics,
+                        appliances), 7-ply (70-200 kg, machinery, export). Mono cartons for retail/food products. Not
+                        sure? Call us for free consultation.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Are your boxes eco-friendly and recyclable?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>100% YES! All our boxes are: Made from FSC-certified kraft paper, 100% recyclable and
+                        biodegradable, Uses eco-friendly water-based inks, Carbon-neutral production process.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Do you export internationally? What about documentation?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we export to 15+ countries. We provide: ISPM-15 fumigation certificates, Commercial invoice
+                        & packing list, Certificate of origin, Customs documentation support.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    What is your quality guarantee policy?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We guarantee: 99.8% defect-free rate, 30-day quality guarantee, Free replacement for
+                        manufacturing defects, Pre-dispatch quality inspection. If you find >2% defects, we replace the
+                        entire batch free.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    What certifications do you have?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>ISO 9001:2015 (Quality Management), FSC Certification (Sustainable Forestry), MSME Registered,
+                        Food-grade certification (for food packaging), Regular third-party quality audits.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>SK Printers Manufacturing</h3>
+                <p>India's fastest-growing cardboard packaging manufacturer. ISO 9001:2015 & FSC certified.</p>
+                <p><strong>Email:</strong> sales@skprinters.com</p>
+                <p><strong>Phone:</strong> +91 98765 43210</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="sk-printers-ultimate-website.html#quote">Get Quote</a></li>
+                    <li><a href="sk-printers-ultimate-website.html#products">Products</a></li>
+                    <li><a href="sk-printers-ultimate-website.html#industries">Industries</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="resources.html">Download Catalog</a></li>
+                    <li><a href="technical-specs.html">Technical Specs</a></li>
+                    <li><a href="payment-terms.html">Payment Terms</a></li>
+                    <li><a href="shipping-policy.html">Shipping Policy</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="quality.html">Quality Standards</a></li>
+                    <li><a href="certifications.html">Certifications</a></li>
+                    <li><a href="sustainability.html">Sustainability</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SK Printers Manufacturing Pvt Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('active'));
+            if (!isActive) faqItem.classList.add('active');
+        }
+    </script>
+</body>
+
+</html>

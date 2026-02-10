@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Resources | SK Printers</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a1a1a;
+            --secondary: #8B6F47;
+            --bg-alt: #F8F9FA;
+            --text: #212529;
+            --border: #DEE2E6;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: white;
+            line-height: 1.6;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: white;
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .card {
+            padding: 2rem;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--secondary);
+            transform: translateY(-5px);
+        }
+
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-top: 1.5rem;
+        }
+
+        .btn:hover {
+            background: var(--secondary);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="sk-printers-ultimate-website.html" class="logo">📦 SK Printers</a>
+        <a href="sk-printers-ultimate-website.html"
+            style="text-decoration: none; font-weight: 600; color: var(--primary);">Back to Home</a>
+    </header>
+
+    <div style="text-align: center; padding: 4rem 2rem; background: var(--bg-alt);">
+        <h1 style="font-family: 'Manrope', sans-serif; font-size: 3rem; margin-bottom: 1rem;">Download Resources</h1>
+        <p>Product catalogs, technical specifications, and company profiles.</p>
+    </div>
+
+    <div style="max-width: 600px; margin: 0 auto 3rem; text-align: center;">
+        <div class="card" style="border-color: var(--secondary); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            <div class="icon" style="font-size: 4rem;">📘</div>
+            <h3 style="font-size: 1.8rem;">Product Catalog 2026</h3>
+            <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Complete guide to all our products with specs and
+                pricing.</p>
+            <a href="#" class="btn" onclick="alert('Downloading PDF...')">Download PDF (2.5 MB)</a>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

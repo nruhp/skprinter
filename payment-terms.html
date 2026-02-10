@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Terms & Credit | SK Printers</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a1a1a;
+            --secondary: #8B6F47;
+            --success: #40916C;
+            --bg: #FFFFFF;
+            --bg-alt: #F8F9FA;
+            --text: #212529;
+            --text-light: #6C757D;
+            --border: #DEE2E6;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Manrope', sans-serif;
+            font-weight: 800;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background: white;
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-center {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-center a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .nav-center a:hover {
+            color: var(--secondary);
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .content-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .payment-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border: 2px solid var(--border);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 4rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+
+        @media (max-width: 768px) {
+            .nav-center {
+                display: none;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="sk-printers-ultimate-website.html" class="logo">📦 SK Printers</a>
+            <div class="nav-center">
+                <a href="sk-printers-ultimate-website.html">Home</a>
+                <a href="resources.html">Resources</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <a href="sk-printers-ultimate-website.html#quote" class="btn-primary">Get Quote</a>
+        </nav>
+    </header>
+
+    <div class="content-container">
+        <h1 class="section-title">Flexible Payment Options</h1>
+
+        <div class="payment-card">
+            <h3 style="font-size: 1.5rem; margin-bottom: 2rem;">Payment Terms & Methods</h3>
+
+            <div style="margin-bottom: 2rem;">
+                <h4 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--secondary);">For New Clients</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">✓ 50% advance payment, 50%
+                        before dispatch</li>
+                    <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">✓ 5% discount for 100%
+                        advance payment</li>
+                    <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">✓ Sample order: Full advance
+                        payment</li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+                <h4 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--secondary);">For Established Clients (3+
+                    orders)</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">✓ Net 30 credit terms
+                        (payment due in 30 days)</li>
+                    <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">✓ Net 45 credit terms (for
+                        high-volume clients)</li>
+                    <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">✓ Credit limit: ₹5L - ₹50L
+                        (based on history)</li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 2rem;">
+                <h4 style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--secondary);">Accepted Payment Methods
+                </h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">✓ NEFT / RTGS / IMPS
+                        (recommended)</li>
+                    <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">✓ Cheque (3-5 business days
+                        clearance)</li>
+                    <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">✓ Letter of Credit (LC) for
+                        export orders</li>
+                    <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border);">✓ EMI options available for
+                        orders above ₹5 lakhs</li>
+                </ul>
+            </div>
+
+            <div
+                style="background: var(--bg-alt); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--success);">
+                <h4 style="margin-bottom: 1rem;">Bank Details</h4>
+                <p><strong>Account Name:</strong> SK Printers Manufacturing Pvt Ltd</p>
+                <p><strong>Bank:</strong> HDFC Bank</p>
+                <p><strong>Account Number:</strong> 50200012345678</p>
+                <p><strong>IFSC Code:</strong> HDFC0001234</p>
+                <p><strong>Branch:</strong> Katpadi, Tamil Nadu</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>SK Printers</h3>
+                <p>ISO 9001:2015 & FSC Certified</p>
+            </div>
+            <div class="footer-links">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="payment-terms.html">Payment Terms</a></li>
+                    <li><a href="shipping-policy.html">Shipping Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align:center; padding-top:2rem; border-top:1px solid rgba(255,255,255,0.1); margin-top:2rem;">
+            &copy; 2026 SK Printers Manufacturing Pvt Ltd.
+        </div>
+    </footer>
+</body>
+
+</html>
